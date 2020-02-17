@@ -1,4 +1,6 @@
 package Sample.Maven_clean_code;
+import static org.junit.Assert.assertEquals;
+
 import java.util.*;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,13 +12,6 @@ public class Intrest_test extends TestCase {
 	Simple_Intrest object1=new Simple_Intrest();
 	Compound_Interest object2= new Compound_Interest();
 	
-//	@Before
-//	public void initialize()
-//	{
-//		object1=new Simple_Intrest();
-//		object2 = new Compound_Interest();
-//	}
-//	
 	@Test
 	public void test() {
 		
@@ -25,12 +20,16 @@ public class Intrest_test extends TestCase {
 	}
 	
 	@Test
-	public void test2() {
-		//Age obj=new Age();
-		
+	public void test2() {		
 		double result=object2.calculate_compound_interest(5000.00,10,0.05,12);
-		//result.setPrecision(2);
 		assertEquals(result,8235.0474884514);
+	}
+	
+Cost_Estimation object=new Cost_Estimation();
+	
+	@Test
+	public void test3() {
+		assertEquals(object.estimate(1),1200);
 	}
 	
 	
