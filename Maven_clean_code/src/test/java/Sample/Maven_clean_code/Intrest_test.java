@@ -32,6 +32,21 @@ Cost_Estimation object=new Cost_Estimation();
 		assertEquals(object.estimate(1),1200);
 	}
 	
+	@Test
+	public void test4() {
+		assertEquals(object.estimate(2),1500);
+	}
+	
+	@Test
+	public void test5() {
+		assertEquals(object.estimate(3),1800);
+	}
+	
+	@Test
+	public void test6() {
+		assertEquals(object.estimate(4),2500);
+	}
+	
 	
 
 }
